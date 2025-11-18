@@ -1,6 +1,6 @@
 /* FULL NAVBAR */
 .hp-navbar {
-  width: 1280px;
+  width: 2780px;
   height: 76px;
   background: #16232AD9;
   display: flex;
@@ -39,14 +39,14 @@
 
 /* LOGO 26 × 26 px */
 .hp-logo {
-  width: 26.34px;
-  height: 26.34px;
+  width: 39.34px;
+  height: 39.34px;
   object-fit: contain;
 }
 
 /* H&P PROJECTS TEXT EXACT SIZE (344.44 × 32 px) */
 .hp-title {
-  width: 344.44px;
+  width: 364.44px;
   height: 32px;
   font-family: Montserrat, sans-serif;
   font-size: 16px;

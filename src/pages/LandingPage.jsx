@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import BusinessGrid from "../components/BusinessGrid";
 import Header from "../components/Header";
 
-import techInnovationImage from "../assets/tech-innovation.jpg";
+import techInnovationImage from "../assets/tech-innovation.png";
 import logoImage from "../assets/logo.jpg";
 
 export default function LandingPage() {

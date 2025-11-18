@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 // Social Icons (your exact filenames)
 import facebookIcon from "../assets/footer1.png";

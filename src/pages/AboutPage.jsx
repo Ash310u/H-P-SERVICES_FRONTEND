@@ -4,7 +4,7 @@ import "./AboutPage.css";
 import Header from "../components/Header";
 
 import maskImage from "../assets/Mask.jpg";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 // Social icons
 import f1 from "../assets/footer1.png";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-import logo from "../assets/logo.jpg"; // <-- Import logo before text
+import logo from "../assets/logo.png"; // <-- Import logo before text
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -47,6 +47,3 @@ export default function Header() {
     </>
   );
 }
-
-
-
