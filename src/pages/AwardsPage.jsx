@@ -3,12 +3,11 @@ import "./AwardsPage.css";
 import Header from "../components/Header";
 
 // Award Images
-//import award1 from "../assets/1.jpg";
-
-import award2 from "../assets/2.jpg";
-import award3 from "../assets/3.jpg";
-import award4 from "../assets/4.jpg";
-import award5 from "../assets/5.jpg";
+import award1 from "../assets/1.png";
+import award2 from "../assets/2.png";
+import award3 from "../assets/3.png";
+import award4 from "../assets/4.png";
+import award5 from "../assets/5.png";
 
 // Certificates image
 import certificatesImg from "../assets/certificates.png";
@@ -28,29 +27,64 @@ import locationIcon from "../assets/location.png";
 export default function AwardsPage() {
   const awards = [
     {
-      title: "Excellence in Project Execution Award",
+      title: (
+        <>
+          Excellence in<br />
+          Project Execution<br />
+          Award
+        </>
+      ),
       img: award1,
-      desc: "Recognized nationally for delivering complex turnkey and industrial projects with precision and efficiency.",
+      desc:
+        "Recognized nationally for delivering complex turnkey and industrial projects with precision, on time, and under budget.",
     },
     {
-      title: "Innovation & Green Building Award",
+      title: (
+        <>
+          Innovation &<br />
+          Green Building<br />
+          Award
+        </>
+      ),
       img: award2,
-      desc: "Honored for integrating sustainable, smart, and innovative green solutions.",
+      desc:
+        "Honored for integrating sustainable, smart IT integration, and eco-friendly design into our projects.",
     },
     {
-      title: "Safety & Compliance Leadership Award",
+      title: (
+        <>
+          Safety &<br />
+          Compliance<br />
+          Leadership Award
+        </>
+      ),
       img: award3,
-      desc: "Recognized for excellence in safety, regulatory compliance, and operational leadership.",
+      desc:
+        "Acknowledged for maintaining high safety standards, regulatory compliance, and workforce welfare across all operations.",
     },
     {
-      title: "Community & Rural Upliftment Recognition",
+      title: (
+        <>
+          Community &<br />
+          Rural Upliftment<br />
+          Recognition
+        </>
+      ),
       img: award4,
-      desc: "Awarded for community development, local upliftment, and rural impact initiatives.",
+      desc:
+        "Applauded for efforts in rural development,job creation,skill training,and contributions to local infrastructure.",
     },
     {
-      title: "Quality & Standards Distinction",
+      title: (
+        <>
+          Quality &<br />
+          Standards<br />
+          Distinction
+        </>
+      ),
       img: award5,
-      desc: "Honored for superior quality, process excellence, and standardised operations.",
+      desc:
+        "Certified and awarded for maintaining ISO and Statutory certifications,trade license, GST, EPF/ESI compliance, achieving superior quality in all deliverables.",
     },
   ];
 
@@ -59,23 +93,29 @@ export default function AwardsPage() {
       <div className="awards-wrapper">
         <Header />
 
-        {/* HERO SECTION */}
+        {/* ---------------- HERO SECTION ---------------- */}
         <section className="hp-hero">
-          <div className="awards-title-container">
-            <h2 className="awards-big-a">A</h2>
-            <h2 className="awards-text">WARDS</h2>
+          <div className="awards-title-group">
+            <h1 className="awards-A">A</h1>
+            <h1 className="awards-WARDS">WARDS</h1>
           </div>
 
-          <div className="awards-line line-1"></div>
-          <div className="awards-line line-2"></div>
+          {/* Right-side big + small Figma bubbles */}
+          <div className="cert-bubble-right"></div>
+          <div className="cert-bubble-right-small"></div>
 
-          <p className="hp-desc">
+          <div className="awards-line-small"></div>
+          <div className="awards-line-big"></div>
+
+          <p className="awards-hero-desc">
             H & P Projects is proud to have earned recognition for excellence,
-            innovation, and impact across its services.
+            innovation, and impact across its services. Our commitment to
+            quality, safety, sustainability, and service has been acknowledged
+            through multiple awards.
           </p>
         </section>
 
-        {/* GRID */}
+        {/* ---------------- AWARDS GRID ---------------- */}
         <section className="awards-grid-section">
           <div className="awards-grid">
             {awards.map((a, i) => (
@@ -91,35 +131,46 @@ export default function AwardsPage() {
           </div>
         </section>
 
-        {/* CERTIFICATES SECTION */}
+        {/* ---------------- CERTIFICATES HEADER BLOCK ---------------- */}
         <section className="cert-section">
-          <div className="cert-bubble-big"></div>
-          <div className="cert-bubble-small"></div>
-
-          <div className="cert-lines-container">
-            <div className="cert-line cert-line-small"></div>
-            <div className="cert-line cert-line-big"></div>
+          {/* Left bubbles */}
+          <div className="cert-bubbles">
+            <div className="cert-bubble-big"></div>
+            <div className="cert-bubble-small"></div>
           </div>
 
+          {/* Top lines */}
+          <div className="cert-lines-wrapper">
+            <div className="cert-line-upper-small"></div>
+            <div className="cert-line-upper-big"></div>
+          </div>
+
+          {/* Title */}
           <div className="cert-title-wrapper">
             <h1 className="cert-title-c">C</h1>
             <h1 className="cert-title-rest">ERTIFICATES</h1>
           </div>
 
+          {/* Paragraph */}
           <p className="cert-desc">
             H & P Projects is proud to have earned recognition for excellence,
             innovation, and impact across its services. Our commitment to
             quality, safety, sustainability, and service has been acknowledged
-            through multiple certifications.
+            through multiple awards.
           </p>
+        </section>
 
-          <div className="cert-image-wrapper">
-            <img src={certificatesImg} alt="Certificates" className="cert-big-img" />
-          </div>
+        {/* ---------------- CERTIFICATES IMAGE ---------------- */}
+        <section className="cert-image-wrapper">
+          <img
+            src={certificatesImg}
+            alt="Certificates"
+            className="cert-big-img"
+          />
         </section>
       </div>
 
-      {/* FOOTER */}
+      {/* ---------------- FOOTER ---------------- */}
       <div className="footer-section">
         <div className="footer-content">
           <div className="footer-left">
@@ -129,7 +180,8 @@ export default function AwardsPage() {
             </div>
 
             <p className="footer-desc">
-              Ready to transform your vision into reality? Our team is prepared to guide you through every step.
+              Ready to transform your vision into reality? Our team is prepared
+              to guide you through every step.
             </p>
 
             <div className="footer-social">
@@ -148,7 +200,9 @@ export default function AwardsPage() {
               <img src={mailIcon} alt="mail" className="contact-icon" />
               <div>
                 <h4>Email</h4>
-                <a href="mailto:info@hpprojects.com.au">info@hpprojects.com.au</a>
+                <a href="mailto:info@hpprojects.com.au">
+                  info@hpprojects.com.au
+                </a>
               </div>
             </div>
 

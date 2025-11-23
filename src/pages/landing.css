@@ -1,3 +1,7 @@
+/* ==========================================================
+   GLOBAL WRAPPER
+========================================================== */
+
 .landing-page {
   width: 100%;
   overflow-x: hidden;
@@ -5,13 +9,13 @@
   font-family: "Inter", sans-serif;
 }
 
-/* ------------------------------------------------------- */
-/* CITIES STRIP */
-/* ------------------------------------------------------- */
+/* ==========================================================
+   CITIES STRIP + MARQUEE
+========================================================== */
 
 .cities-strip {
   text-align: center;
-  padding: 50px 20px 30px;
+  padding: 50px 20px 40px;
 }
 
 .cities-strip h3 {
@@ -20,26 +24,38 @@
   font-weight: 700;
 }
 
-.cities-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
+.cities-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.cities-list a {
+.cities-track {
+  display: flex;
+  gap: 18px;
+  animation: citiesLoop 22s linear infinite;
+  white-space: nowrap;
+}
+
+.city-pill {
   padding: 12px 20px;
   border: 1.5px solid #cfcfcf;
   border-radius: 12px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
+  flex-shrink: 0;
 }
 
-/* ------------------------------------------------------- */
-/* BUSINESS SECTION */
-/* ------------------------------------------------------- */
+@keyframes citiesLoop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================================
+   BUSINESS SECTION
+========================================================== */
 
 .business-section {
   position: relative;
@@ -67,7 +83,6 @@
   border-radius: 6px;
 }
 
-/* RIGHT BUBBLES */
 .business-bubbles-right {
   position: absolute;
   top: -30px;
@@ -96,7 +111,6 @@
   top: 35px;
 }
 
-/* TITLE */
 .business-title-wrapper {
   display: flex;
   justify-content: center;
@@ -134,36 +148,13 @@
   text-align: center;
 }
 
-/* ------------------------------------------------------- */
-/* TECHNOLOGY & INNOVATION */
-/* ------------------------------------------------------- */
+/* ==========================================================
+   TECHNOLOGY & INNOVATION SECTION — FIGMA PERFECT
+========================================================== */
 
 .tech-innovation-section {
   position: relative;
-  padding: 80px 20px 80px;
-}
-
-/* LEFT BUBBLES EXACTLY LIKE FIGMA */
-.tech-bubble-big-left {
-  position: absolute;
-  width: 136px;
-  height: 136px;
-  background: #075056;
-  border-radius: 50%;
-  top: 40px;
-  left: 40px;
-  z-index: 5;
-}
-
-.tech-bubble-small-left {
-  position: absolute;
-  width: 68px;
-  height: 68px;
-  background: #075056;
-  border-radius: 50%;
-  top: 130px;
-  left: 180px;
-  z-index: 5;
+  padding: 80px 20px;
 }
 
 /* RIGHT LINES */
@@ -187,100 +178,134 @@
   border-radius: 6px;
 }
 
-/* MAIN CONTENT LAYOUT */
+/* MAIN ROW (LEFT TEXT + RIGHT IMAGE) */
 .tech-innovation-main-content {
-  margin-top: 160px;
+  margin-top: 140px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 60px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* LEFT TITLE */
+/* LEFT TEXT BLOCK */
+.tech-innovation-content {
+  width: 50%;
+  padding-left: 65px;   /* EXACT FIGMA LEFT OFFSET */
+}
+
 .tech-heading {
   font-size: 48px;
   font-weight: 900;
   line-height: 1.1;
   position: relative;
+  text-align: left;
 }
 
 .tech-big-t {
   font-size: 80px;
   color: #075056;
   font-weight: 900;
-  margin-right: 8px;
 }
 
 .tech-heading::after {
   content: "";
-  width: 180px;
+  width: 170px;
   height: 4px;
   background-color: #075056;
   position: absolute;
-  left: 0;
   bottom: -18px;
+  left: 0;
   border-radius: 4px;
 }
 
+/* SHORT PARAGRAPH */
 .tech-innovation-description {
-  margin-top: 40px;
+  margin-top: 35px;
   font-size: 17px;
   line-height: 1.8;
-  max-width: 570px;
+  max-width: 540px;
   color: #333;
+  text-align: left;
 }
 
-/* ------------------------------------------------------- */
-/* IMAGE + BEHIND IMAGE BUBBLES */
-/* ------------------------------------------------------- */
-
+/* IMAGE + BUBBLES */
 .tech-innovation-image-container {
-  flex: 1;
-  min-width: 380px;
+  width: 50%;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .tech-innovation-image {
   width: 100%;
   border-radius: 20px;
   position: relative;
-  z-index: 5; /* image stays above bubbles */
+  z-index: 5;
 }
 
-/* BIG BUBBLE BEHIND IMAGE */
-.tech-image-bubble-big {
-  width: 160px;
-  height: 160px;
+/* SMALL BUBBLE (behind image, emerging from left) */
+.img-bubble-small {
+  width: 150px;
+  height: 150px;
   background: #075056;
   border-radius: 50%;
   position: absolute;
-  left: -90px;
-  bottom: 40px;
-  opacity: 0.9;
+  top: 20px;
+  left: -35px;
+  opacity: 0.95;
   z-index: 1;
 }
 
-/* SMALL BUBBLE BEHIND IMAGE */
-.tech-image-bubble-small {
-  width: 80px;
-  height: 80px;
+/* BIG BUBBLE (behind image, right side) */
+.img-bubble-big {
+  width: 350px;
+  height: 350px;
   background: #075056;
   border-radius: 50%;
   position: absolute;
-  right: -30px;
-  bottom: -10px;
+  right: -150px;
+  top: 48%;
+  transform: translateY(-50%);
   opacity: 0.9;
-  z-index: 1;
+  z-index: 0;
 }
 
-/* ------------------------------------------------------- */
-/* SUPPLY CAPABILITY */
-/* ------------------------------------------------------- */
+/* ==========================================================
+   LONG PARAGRAPH — FIGMA ACCURATE (A1 + Extra spacing)
+========================================================== */
+
+/* LONG PARAGRAPH — FIGMA ACCURATE (A1 + Correct upward shift) */
+/* ==========================================================
+   LONG PARAGRAPH — FIGMA ACCURATE (A1 UPDATED)
+========================================================== */
+
+.tech-innovation-full-text {
+  max-width: 1153px;
+  margin-left: 65px;       /* same left alignment */
+  margin-top: 40px;        /* shifted UP (was 70px) */
+  
+  font-size: 17px;         /* smaller font size (was 21.33px) */
+  line-height: 150%;       /* keep figma perfect spacing */
+  font-weight: 400;
+
+  color: #333;
+  text-align: left;
+}
+
+/* ==========================================================
+   FULL SERVICE SUPPLY CAPABILITY
+========================================================== */
 
 .supply-capability-section {
   padding: 120px 20px 80px;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+
+.supply-capability-content {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .supply-title-container {
@@ -290,55 +315,75 @@
 }
 
 .supply-title-graphic-f {
-  font-size: 60px;
+  font-size: 64px;
   font-weight: 900;
   color: #075056;
 }
 
 .supply-title-text {
-  font-size: 34px;
-  font-weight: 800;
+  font-size: 38px;
+  font-weight: 900;
 }
 
-.supply-line.long {
-  width: 260px;
-  height: 4px;
-  background-color: #075056;
-  border-radius: 4px;
+/* TOP LINES */
+.supply-lines-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 
-.supply-line.short {
-  width: 180px;
+.supply-top-line-short {
+  width: 420px;
   height: 4px;
-  background-color: #075056;
-  border-radius: 4px;
-  margin-top: 8px;
+  background: #075056;
+  border-radius: 6px;
+  margin-bottom: 6px;
 }
 
+.supply-top-line-long {
+  width: 630px;
+  height: 4px;
+  background: #075056;
+  border-radius: 6px;
+}
+
+/* DESCRIPTION */
 .supply-description {
-  max-width: 900px;
-  margin: 30px 0 60px;
+  max-width: 950px;
+  margin: 30px 0 50px;
   line-height: 1.85;
   font-size: 17px;
   color: #333;
 }
 
+/* BOTTOM LINES */
 .supply-bottom-lines {
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+  gap: 6px;
 }
 
-.supply-bottom-line {
-  width: 100%;
-  height: 3px;
-  background-color: #075056;
-  margin-bottom: 6px;
-  border-radius: 4px;
+.supply-bottom-line.short {
+  width: 420px;
+  height: 4px;
+  background: #075056;
+  border-radius: 6px;
 }
 
-/* ------------------------------------------------------- */
-/* FOOTER */
-/* ------------------------------------------------------- */
+.supply-bottom-line.long {
+  width: 630px;
+  height: 4px;
+  background: #075056;
+  border-radius: 6px;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
 
 .footer-section {
   background-color: #075056;
@@ -349,7 +394,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 60px;
-  margin-top: 50px;
+  margin: 80px auto 0;
+  max-width: 1100px;
 }
 
 .footer-logo-wrapper {
@@ -373,8 +419,6 @@
   margin-top: 18px;
   font-size: 16px;
   line-height: 1.7;
-  max-width: 360px;
-  color: white;
 }
 
 .footer-icons img {
@@ -386,7 +430,6 @@
 
 .footer-contact-column {
   min-width: 260px;
-  color: white;
 }
 
 .footer-contact-title {
@@ -399,7 +442,6 @@
   font-size: 15px;
   margin-bottom: 20px;
   line-height: 1.6;
-  color: #ffffff;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -408,11 +450,17 @@
   color: #bff6ff;
 }
 
+.footer-divider-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff40;
+}
+
 .footer-bottom {
+  width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 14px;
-  color: #ffffff;
 }
 
 .footer-bottom span {
@@ -425,7 +473,16 @@
   color: #bff6ff;
 }
 
-/* RESPONSIVE */
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1024px) {
+  .tech-innovation-main-content {
+    margin-top: 150px;
+  }
+}
+
 @media (max-width: 768px) {
   .business-title-text {
     font-size: 32px;
@@ -435,12 +492,40 @@
     font-size: 70px;
   }
 
-  .right-bubble-big,
-  .right-bubble-small {
+  .bubble-big,
+  .bubble-small,
+  .img-bubble-big,
+  .img-bubble-small {
     display: none;
+  }
+
+  .tech-innovation-content {
+    padding-left: 20px;
+  }
+
+  .tech-innovation-full-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
   }
 
   .footer-section {
     text-align: center;
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cities-strip h3 {
+    font-size: 20px;
+  }
+
+  .city-pill {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .supply-title-text {
+    font-size: 26px;
   }
 }

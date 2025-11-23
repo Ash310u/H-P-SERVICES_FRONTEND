@@ -1,218 +1,138 @@
-/* ======================================================
-   PARTNER SECTION — Figma Accurate Styling
-   ====================================================== */
-
+/* SECTION */
 .partner-section {
   width: 100%;
-  background: #E4EEF0;   /* Figma background */
+  background: #E4EEF0;
   padding: 110px 5%;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
 
-/* ------------------------------------------------------
-   TWO VERTICAL LINES (LEFT + RIGHT)
-   ------------------------------------------------------ */
-
-.partner-line {
-  position: absolute;
-  width: 8px;
-  background: #075056; 
-  border-radius: 6px;
-  opacity: 1;
-  z-index: 2;
-}
-
-/* LEFT SIDE */
-.partner-line.left-long {
-  height: 54%;
-  top: 21%;
-  left: 4%;
-}
-
-.partner-line.left-short {
-  height: 34%;
-  top: 33%;
-  left: calc(4% + 16px);
-}
-
-/* RIGHT SIDE */
-.partner-line.right-long {
-  height: 54%;
-  top: 21%;
-  right: 4%;
-}
-
-.partner-line.right-short {
-  height: 34%;
-  top: 33%;
-  right: calc(4% + 16px);
-}
-
-/* ------------------------------------------------------
-   BUBBLES (Exactly like Figma)
-   ------------------------------------------------------ */
-
-.partner-bubble {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.50;
-  z-index: 1;
-  background: #075056;
-}
-
-.partner-bubble.bubble-left {
-  width: 95px;
-  height: 95px;
-  top: 65px;
-  left: 9%;
-}
-
-.partner-bubble.bubble-right-lg {
-  width: 185px;
-  height: 185px;
-  top: 40px;
-  right: 7%;
-}
-
-.partner-bubble.bubble-right-sm {
-  width: 70px;
-  height: 70px;
-  top: 155px;
-  right: 15%;
-}
-
-/* ------------------------------------------------------
-   HEADING — Figma Accurate
-   ------------------------------------------------------ */
-
+/* ==========================================================
+   TITLE — (P moved upward EXACTLY like Figma)
+========================================================== */
 .partner-title {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;   /* allows independent vertical control */
   gap: 8px;
-  margin-bottom: 80px;
-  position: relative;
-  z-index: 10;   /* Make sure heading is above bubbles */
+  margin-bottom: 70px;
 }
 
-/* Big P (slightly bigger) */
 .partner-title-big-p {
   font-size: 110px;
   font-weight: 800;
-  color: #075056;  
-  line-height: 0.8;
-  margin-right: 5px;
+  color: #075056;
+  margin-top: -32px;         /* ⬆️ Lifts P upward */
 }
 
-/* Remaining text (pure black) */
 .partner-title-rest {
   font-size: 50px;
   font-weight: 800;
-  color: #000000; 
-  letter-spacing: 1px;
-  line-height: 1;
+  margin-top: 15px;          /* aligns ARTNERS PROFILE with the P */
 }
 
-/* ------------------------------------------------------
-   CARD CONTAINER
-   ------------------------------------------------------ */
+/* ==========================================================
+   BACKGROUND PANEL
+========================================================== */
+.panel-bg {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #f6f9fa 0%, #e1e8ea 100%);
+  padding: 50px 0;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
 
+/* ==========================================================
+   CARD CONTAINER
+========================================================== */
 .partner-card-container {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  flex-wrap: wrap;
-  z-index: 5;
-  position: relative;
+  gap: 90px;
 }
 
-/* ------------------------------------------------------
-   CARD — NO OUTER BORDER, PURE FIGMA STYLE
-   ------------------------------------------------------ */
-
+/* ==========================================================
+   PARTNER CARD
+========================================================== */
 .partner-card {
   width: 330px;
-  background: transparent;  /* remove teal border */
+  background: transparent;
+  overflow: visible;
   border-radius: 22px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); /* Figma shadow */
+  position: relative;
   cursor: pointer;
-  transition: 0.35s ease;
-  overflow: hidden; /* ensures perfect clipping */
 }
 
-/* Hover */
-.partner-card:hover {
-  transform: translateY(-12px) scale(1.04);
+/* IMAGE WRAPPER */
+.image-wrapper {
+  height: 350px;
+  background: #0d5a5b;
+  border-radius: 18px 18px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-/* PHOTO */
-.partner-card img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
+.image-wrapper img {
+  width: 260px;
+  object-fit: contain;
+  transition: 0.3s ease;
 }
 
-/* NAME BAR — ALWAYS VISIBLE */
+.partner-card:hover img {
+  transform: translateY(-14px);
+}
+
+/* NAME BAR */
 .partner-card-name {
-  width: 100%;
   background: #004D4F;
-  color: white;
+  color: #fff;
+  padding: 14px 0;
   font-size: 20px;
   font-weight: 700;
-  padding: 14px 0;
-  text-align: center;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 18px 18px;
+  position: relative;
+  z-index: 2;
 }
 
-/* ------------------------------------------------------
-   RESPONSIVE BEHAVIOR
-   ------------------------------------------------------ */
-
-@media (max-width: 900px) {
-
-  .partner-line,
-  .partner-bubble {
-    display: none;
-  }
-
-  .partner-title-big-p {
-    font-size: 80px;
-  }
-
-  .partner-title-rest {
-    font-size: 36px;
-  }
+/* ==========================================================
+   HOVER DESCRIPTION — APPEARS BELOW NAME
+========================================================== */
+.partner-hover-info {
+  position: absolute;
+  top: 390px;
+  left: 0;
+  width: 100%;
+  background: #0c5b5f;
+  padding: 22px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(40px);
+  border-radius: 0 0 18px 18px;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
-@media (max-width: 600px) {
-  .partner-card {
-    width: 85%;
-  }
-
-  .partner-title-big-p {
-    font-size: 65px;
-  }
-
-  .partner-title-rest {
-    font-size: 28px;
-  }
+.partner-card:hover .partner-hover-info {
+  opacity: 1;
+  transform: translateY(-10px);
 }
-@keyframes partnerGlow {
-  0% {
-    box-shadow: 0 0 0 rgba(7, 80, 86, 0.0);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 35px rgba(7, 80, 86, 0.35);
-    transform: scale(1.015);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(7, 80, 86, 0.0);
-    transform: scale(1);
-  }
+
+/* TEXT INSIDE HOVER */
+.partner-hover-info h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.partner-hover-info h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.partner-hover-info p {
+  font-size: 12.5px;
+  line-height: 130%;
 }
