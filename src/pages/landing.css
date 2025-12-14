@@ -147,7 +147,6 @@
 /* ==========================================================
    TECHNOLOGY & INNOVATION SECTION — FIGMA PERFECT
 ========================================================== */
-
 .tech-innovation-section {
   position: relative;
   padding: 80px 20px;
@@ -266,11 +265,9 @@
   opacity: 0.9;
   z-index: 0;
 }
-
 /* ==========================================================
    LONG PARAGRAPH — FIGMA ACCURATE (A1 + Extra spacing)
 ========================================================== */
-
 /* LONG PARAGRAPH — FIGMA ACCURATE (A1 + Correct upward shift) */
 /* ==========================================================
    LONG PARAGRAPH — FIGMA ACCURATE (A1 UPDATED)
@@ -288,16 +285,13 @@
   color: #333;
   text-align: left;
 }
-
 /* ==========================================================
    FULL SERVICE SUPPLY CAPABILITY
 ========================================================== */
-
 .supply-capability-section {
   padding: 120px 20px 80px;
   margin-top: 60px;
 }
-
 .supply-capability-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -379,7 +373,6 @@
 /* ==========================================================
    FOOTER
 ========================================================== */
-
 .footer-section {
   background-color: #075056;
   padding: 70px 50px;
@@ -471,7 +464,6 @@
 /* ==========================================================
    RESPONSIVE
 ========================================================== */
-
 @media (max-width: 1024px) {
   .tech-innovation-main-content {
     margin-top: 150px;
