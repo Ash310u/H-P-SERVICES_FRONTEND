@@ -62,7 +62,7 @@ export default function Partner() {
           </div>
 
           {/* NAME */}
-          <div className="partner-card-name">KOUSHIK PAUL</div>
+          <div className="partner-card-name">ABHRADEEP HAZRA</div>
 
           {/* DESCRIPTION */}
           <div className="partner-hover-info">
