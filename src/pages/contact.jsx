@@ -1,6 +1,14 @@
 import "../pages/styles/contact.css";
 
 export default function Contact() {
+  const handleSendQuery = () => {
+    window.open(
+      "https://forms.gle/bAQxbin5FzJqi3hcA",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <div className="contact-page">
       <div className="contact-card">
@@ -13,19 +21,24 @@ export default function Contact() {
         </p>
 
         <h3>DUST SOLUTION SYSTEM</h3>
+
         <p className="info">
-          Email:  <br />
-          kp4283462009@gmail.com  <br />
+          Email: <br />
+          kp4283462009@gmail.com <br />
           abhradeephazra99@gmail.com
         </p>
 
         <p className="address">
-          B/28, Gholui,Balichak,Kharagpur, Paschim Medinipur, West Bengal-721124
+          B/28, Gholui, Balichak, Kharagpur, Paschim Medinipur,
+          West Bengal - 721124
         </p>
 
         <p className="info">Ph: 8984030821 , 9332627903</p>
 
-        <button className="contact-btn">SEND YOUR QUERY</button>
+        {/* ✅ GOOGLE FORM */}
+        <button className="contact-btn" onClick={handleSendQuery}>
+          SEND YOUR QUERY
+        </button>
       </div>
     </div>
   );
