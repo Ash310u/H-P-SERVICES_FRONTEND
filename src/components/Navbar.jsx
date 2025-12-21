@@ -96,9 +96,15 @@ export default function Navbar() {
             HOME
           </a>
 
-          <a href="#careers" onClick={(e) => handleNavClick(e, "careers")}>
-            CAREERS
+          {/* ✅ OUR PRESENCE */}
+          <a
+            href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          CAREERS
           </a>
+
 
           <a href="/contact" onClick={handleContactClick}>
             CONTACT US
