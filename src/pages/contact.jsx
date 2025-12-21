@@ -1,4 +1,4 @@
-import "../styles/contact.css";
+import "../pages/styles/contact.css";
 
 export default function Contact() {
   return (
@@ -15,12 +15,11 @@ export default function Contact() {
         <h3>DUST SOLUTION SYSTEM</h3>
 
         <p className="address">
-          Regd. Office: Ramcharan Sett Road, Ramrajatala, P.O. Santragachi,
-          Howrah-711104, W.B.
+          B/28, Gholui,Balichak,Kharagpur, Paschim Medinipur, West Bengal-721124
         </p>
 
         <p className="info">
-          Ph: 033 26273267 <br />
+          Mobile No. 8984030821 , 9332627903  <br />
           Email: enquiry@dustsolutionsystem.com <br />
           dustsolutionsystem@rediffmail.com
         </p>
