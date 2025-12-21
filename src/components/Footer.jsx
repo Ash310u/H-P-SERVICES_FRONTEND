@@ -24,10 +24,10 @@ export default function Footer() {
           </p>
 
           <div className="footer-social">
-            <img src={facebookIcon} alt="facebook" />
-            <img src={instagramIcon} alt="instagram" />
+            <img src={facebookIcon} alt="https://www.facebook.com/share/1Bgz1SJfZx" />
+            <img src={instagramIcon} alt="https://www.instagram.com/hpprojectspvtltd?igsh=NnEyZXY3dGQ0YWhp" />
             <img src={twitterIcon} alt="twitter / x" />
-            <img src={linkedinIcon} alt="linkedin" />
+            <img src={linkedinIcon} alt="https://www.linkedin.com/company/h-p-projects" />
             <img src={youtubeIcon} alt="youtube" />
           </div>
         </div>
@@ -44,12 +44,14 @@ export default function Footer() {
 
           <div>
             <h4>Phone</h4>
-            <a href="tel:+51239009000">+51 2 3900 9000</a>
+            <a href="tel:+918984030821">+918984030821</a>
+            <br />
+            <a href="tel:+919332627903">+919332627903</a>
           </div>
 
           <div>
             <h4>Office</h4>
-            <p>Level 5, 100 Miller Street, North Sydney NSW 2060</p>
+            <p>Address: B/28, Gholui,Balichak,Kharagpur, Paschim Medinipur, West Bengal-721124</p>
           </div>
         </div>
       </div>
