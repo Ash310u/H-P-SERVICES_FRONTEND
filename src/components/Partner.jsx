@@ -1,16 +1,22 @@
 import "./styles/Partner.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Images
 import koushik11 from "../assets/koushik11.png";
 import koushik12 from "../assets/koushik12.png";
 
 export default function Partner() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
+
+  const toggleCard = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section className="partner-section">
@@ -34,17 +40,18 @@ export default function Partner() {
 
       {/* Card Container */}
       <div className="partner-card-container">
-        
         {/* CARD 1 */}
-        <div className="partner-card" data-aos="fade-up">
+        <div
+          className={`partner-card ${activeIndex === 0 ? "active" : ""}`}
+          data-aos="fade-up"
+          onClick={() => toggleCard(0)}
+        >
           <div className="image-wrapper">
             <img src={koushik11} alt="Koushik Paul" />
           </div>
 
-          {/* NAME */}
           <div className="partner-card-name">KOUSHIK PAUL</div>
 
-          {/* DESCRIPTION */}
           <div className="partner-hover-info">
             <h4>Partner – Operations & Decision-Making Head of Projects</h4>
             <p>
@@ -58,15 +65,18 @@ export default function Partner() {
         </div>
 
         {/* CARD 2 */}
-        <div className="partner-card" data-aos="fade-up" data-aos-delay="150">
+        <div
+          className={`partner-card ${activeIndex === 1 ? "active" : ""}`}
+          data-aos="fade-up"
+          data-aos-delay="150"
+          onClick={() => toggleCard(1)}
+        >
           <div className="image-wrapper">
             <img src={koushik12} alt="Abhradeep Hazra" />
           </div>
 
-          {/* NAME */}
           <div className="partner-card-name">ABHRADEEP HAZRA</div>
 
-          {/* DESCRIPTION */}
           <div className="partner-hover-info">
             <h4>Partner – Administrative Head & Group Decision-Making</h4>
             <p>
@@ -78,7 +88,6 @@ export default function Partner() {
             </p>
           </div>
         </div>
-        
       </div>
     </section>
   );
