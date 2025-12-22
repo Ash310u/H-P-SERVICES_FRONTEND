@@ -3,11 +3,10 @@
   background: #075056;
   padding: 45px 0;
   color: #fff;
-  margin: 0;
   box-sizing: border-box;
 }
 
-/* MAIN CONTENT AREA */
+/* MAIN CONTENT */
 .footer-content {
   width: 100%;
   max-width: 1400px;
@@ -16,9 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
 }
 
-/* LEFT AREA */
+/* LEFT */
 .footer-left {
   width: 48%;
 }
@@ -48,7 +48,6 @@
   line-height: 150%;
   max-width: 450px;
   opacity: 0.95;
-  font-family: "Montserrat", sans-serif;
 }
 
 /* SOCIAL ICONS */
@@ -56,6 +55,10 @@
   margin-top: 18px;
   display: flex;
   gap: 20px;
+}
+
+.footer-social a {
+  display: inline-flex;
 }
 
 .footer-social img {
@@ -76,7 +79,7 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* RIGHT SIDE */
+/* RIGHT */
 .footer-right {
   width: 48%;
   display: flex;
@@ -88,8 +91,6 @@
   margin: 0;
   font-size: 17px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
 }
 
 .footer-right a,
@@ -99,7 +100,6 @@
   line-height: 140%;
   color: #d8f3f3;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
 }
 
 .footer-right a:hover {
@@ -116,9 +116,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #d9f2f2;
   font-size: 13px;
-  font-family: "Montserrat", sans-serif;
+  color: #d9f2f2;
 }
 
 .footer-links {
@@ -127,12 +126,61 @@
 }
 
 .footer-links a {
-  font-size: 13px;
-  text-decoration: none;
   color: #d9f2f2;
-  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE — TABLET & MOBILE */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    margin: 28px 0;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 24px;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

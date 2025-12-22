@@ -1,4 +1,41 @@
 /* ==========================================================
+   FINAL MOBILE POSITION TUNING (O & F ALIGNMENT)
+========================================================== */
+@media (max-width: 768px) {
+
+  /* OUR BUSINESSES */
+  .business-title-wrapper {
+    align-items: baseline;   /* 🔥 key fix */
+  }
+
+  .business-title-o {
+    position: relative;
+    top: -4px;               /* fine vertical lift */
+  }
+
+  /* FULL SERVICE SUPPLY */
+  .supply-title-container {
+    align-items: baseline;   /* 🔥 key fix */
+  }
+
+  .supply-title-graphic-f {
+    position: relative;
+    top: -3px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .business-title-o {
+    top: -2px;
+  }
+
+  .supply-title-graphic-f {
+    top: -2px;
+  }
+}
+
+/* ==========================================================
    GLOBAL WRAPPER
 ========================================================== */
 .landing-page {
@@ -7,8 +44,9 @@
   background-color: #eef6f7;
   font-family: "Inter", sans-serif;
 }
+
 /* ==========================================================
-   CITIES STRIP + MARQUEE
+   CITIES STRIP
 ========================================================== */
 .cities-strip {
   text-align: center;
@@ -24,7 +62,6 @@
 .cities-marquee {
   width: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .cities-track {
@@ -39,7 +76,6 @@
   border: 1.5px solid #cfcfcf;
   border-radius: 12px;
   background: #fff;
-  cursor: pointer;
   font-size: 15px;
   font-weight: 500;
   flex-shrink: 0;
@@ -51,7 +87,7 @@
 }
 
 /* ==========================================================
-   BUSINESS SECTION
+   BUSINESS SECTION (DESKTOP)
 ========================================================== */
 .business-section {
   position: relative;
@@ -59,38 +95,33 @@
   padding-bottom: 100px;
 }
 
+.business-line.long,
+.business-line.short,
+.business-bubbles-right {
+  position: absolute;
+}
+
 .business-line.long {
   width: 260px;
   height: 4px;
-  background-color: #075056;
-  position: absolute;
+  background: #075056;
   left: 12%;
   top: -45px;
-  border-radius: 6px;
 }
 
 .business-line.short {
   width: 180px;
   height: 4px;
-  background-color: #075056;
-  position: absolute;
+  background: #075056;
   left: 12%;
   top: -20px;
-  border-radius: 6px;
-}
-
-.business-bubbles-right {
-  position: absolute;
-  top: -30px;
-  right: 6%;
 }
 
 .bubble-big {
   width: 170px;
   height: 170px;
-  background-color: #075056;
+  background: #075056;
   border-radius: 50%;
-  opacity: 0.95;
   position: absolute;
   right: 0;
   top: -25px;
@@ -99,9 +130,8 @@
 .bubble-small {
   width: 85px;
   height: 85px;
-  background-color: #075056;
+  background: #075056;
   border-radius: 50%;
-  opacity: 0.95;
   position: absolute;
   right: 140px;
   top: 35px;
@@ -110,28 +140,28 @@
 .business-title-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 70px;
+  gap: 10px;
 }
 
 .business-title-o {
   font-size: 96px;
   font-weight: 900;
   color: #075056;
-  margin-right: 10px;
+  line-height: 1;
 }
 
 .business-title-text {
   font-size: 52px;
   font-weight: 900;
-  letter-spacing: 1px;
+  line-height: 1.1;
 }
 
 .business-center-line {
   width: 160px;
   height: 4px;
-  background-color: #075056;
-  border-radius: 4px;
+  background: #075056;
   margin: 20px auto 30px;
 }
 
@@ -140,55 +170,39 @@
   margin: 0 auto 60px;
   font-size: 17px;
   line-height: 1.8;
-  color: #333;
   text-align: center;
 }
 
 /* ==========================================================
-   TECHNOLOGY & INNOVATION SECTION — FIGMA PERFECT
+   TECHNOLOGY & INNOVATION
 ========================================================== */
 .tech-innovation-section {
   position: relative;
   padding: 80px 20px;
 }
 
-/* RIGHT LINES */
-.tech-line.long {
-  width: 260px;
-  height: 4px;
-  background-color: #075056;
-  position: absolute;
-  right: 12%;
-  top: 10px;
-  border-radius: 6px;
-}
-
+.tech-line.long,
 .tech-line.short {
-  width: 160px;
-  height: 4px;
-  background-color: #075056;
   position: absolute;
   right: 12%;
-  top: 32px;
-  border-radius: 6px;
+  height: 4px;
+  background: #075056;
 }
 
-/* MAIN ROW (LEFT TEXT + RIGHT IMAGE) */
+.tech-line.long { width: 260px; top: 10px; }
+.tech-line.short { width: 160px; top: 32px; }
+
 .tech-innovation-main-content {
   margin-top: 140px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 60px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
-/* LEFT TEXT BLOCK */
 .tech-innovation-content {
   width: 50%;
-  padding-left: 65px;   /* EXACT FIGMA LEFT OFFSET */
+  padding-left: 65px;
 }
 
 .tech-heading {
@@ -196,102 +210,55 @@
   font-weight: 900;
   line-height: 1.1;
   position: relative;
-  text-align: left;
 }
 
 .tech-big-t {
   font-size: 80px;
   color: #075056;
-  font-weight: 900;
 }
 
 .tech-heading::after {
   content: "";
   width: 170px;
   height: 4px;
-  background-color: #075056;
+  background: #075056;
   position: absolute;
   bottom: -18px;
   left: 0;
-  border-radius: 4px;
 }
 
-/* SHORT PARAGRAPH */
 .tech-innovation-description {
   margin-top: 35px;
   font-size: 17px;
   line-height: 1.8;
   max-width: 540px;
-  color: #333;
-  text-align: left;
 }
 
-/* IMAGE + BUBBLES */
 .tech-innovation-image-container {
   width: 50%;
-  position: relative;
-  z-index: 5;
 }
 
 .tech-innovation-image {
   width: 100%;
   border-radius: 20px;
-  position: relative;
-  z-index: 5;
 }
-
-/* SMALL BUBBLE (behind image, emerging from left) */
-.img-bubble-small {
-  width: 150px;
-  height: 150px;
-  background: #075056;
-  border-radius: 50%;
-  position: absolute;
-  top: 170px;
-  left: 370px;
-  opacity: 0.95;
-  z-index: 1;
-}
-/* BIG BUBBLE (behind image, right side) */
-.img-bubble-big {
-  width: 270px;
-  height: 270px;
-  background: #075056;
-  border-radius: 50%;
-  position: absolute;
-  right: 220px;
-  top: 48%;
-  transform: translateY(-50%);
-  opacity: 0.9;
-  z-index: 0;
-}
-/* ==========================================================
-   LONG PARAGRAPH — FIGMA ACCURATE (A1 + Extra spacing)
-========================================================== */
-/* LONG PARAGRAPH — FIGMA ACCURATE (A1 + Correct upward shift) */
-/* ==========================================================
-   LONG PARAGRAPH — FIGMA ACCURATE (A1 UPDATED)
-========================================================== */
 
 .tech-innovation-full-text {
   max-width: 1153px;
-  margin-left: 65px;       /* same left alignment */
-  margin-top: 40px;        /* shifted UP (was 70px) */
-  
-  font-size: 17px;         /* smaller font size (was 21.33px) */
-  line-height: 150%;       /* keep figma perfect spacing */
-  font-weight: 400;
-
-  color: #333;
-  text-align: left;
+  margin-left: 65px;
+  margin-top: 40px;
+  font-size: 17px;
+  line-height: 1.6;
 }
+
 /* ==========================================================
-   FULL SERVICE SUPPLY CAPABILITY
+   SUPPLY CAPABILITY
 ========================================================== */
 .supply-capability-section {
   padding: 120px 20px 80px;
   margin-top: 60px;
 }
+
 .supply-capability-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -299,7 +266,7 @@
 
 .supply-title-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
 }
 
@@ -307,118 +274,91 @@
   font-size: 64px;
   font-weight: 900;
   color: #075056;
+  line-height: 1;
 }
 
 .supply-title-text {
   font-size: 38px;
   font-weight: 900;
+  line-height: 1.15;
 }
-
-/* TOP LINES */
-.supply-lines-top {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.supply-top-line-short {
-  width: 420px;
-  height: 4px;
-  background: #075056;
-  border-radius: 6px;
-  margin-bottom: 6px;
-}
-
-.supply-top-line-long {
-  width: 630px;
-  height: 4px;
-  background: #075056;
-  border-radius: 6px;
-}
-
-/* DESCRIPTION */
-.supply-description {
-  max-width: 950px;
-  margin: 30px 0 50px;
-  line-height: 1.85;
-  font-size: 17px;
-  color: #333;
-}
-
-/* BOTTOM LINES */
-.supply-bottom-lines {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 50px;
-  gap: 6px;
-}
-
-.supply-bottom-line.short {
-  width: 420px;
-  height: 4px;
-  background: #075056;
-  border-radius: 6px;
-}
-
-.supply-bottom-line.long {
-  width: 630px;
-  height: 4px;
-  background: #075056;
-  border-radius: 6px;
-}
-
 
 /* ==========================================================
-   RESPONSIVE
+   MOBILE FIXES (NO HIDING, ONLY SCALING)
 ========================================================== */
-@media (max-width: 1024px) {
-  .tech-innovation-main-content {
-    margin-top: 150px;
-  }
-}
-
 @media (max-width: 768px) {
-  .business-title-text {
-    font-size: 32px;
+
+  .landing-page {
+    padding-top: 72px;
   }
 
-  .business-title-o {
-    font-size: 70px;
-  }
-
-  .bubble-big,
-  .bubble-small,
-  .img-bubble-big,
-  .img-bubble-small {
+  /* Disable decorative shapes only */
+  .business-line.long,
+  .business-line.short,
+  .business-bubbles-right,
+  .tech-line.long,
+  .tech-line.short {
     display: none;
   }
 
-  .tech-innovation-content {
-    padding-left: 20px;
+  /* OUR BUSINESS */
+  .business-title-wrapper {
+    margin-top: 30px;
+  }
+
+  .business-title-o {
+    font-size: 52px;
+  }
+
+  .business-title-text {
+    font-size: 28px;
+  }
+
+  /* TECH STACK */
+  .tech-innovation-main-content {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .tech-innovation-content,
+  .tech-innovation-image-container {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .tech-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tech-innovation-description {
+    margin-inline: auto;
   }
 
   .tech-innovation-full-text {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%;
+    margin: 30px 20px 0;
   }
 
-}
-
-@media (max-width: 480px) {
-  .cities-strip h3 {
-    font-size: 20px;
-  }
-
-  .city-pill {
-    font-size: 14px;
-    padding: 10px 16px;
+  /* SUPPLY TITLE */
+  .supply-title-graphic-f {
+    font-size: 44px;
   }
 
   .supply-title-text {
     font-size: 26px;
   }
+
+  .supply-capability-section {
+    padding: 60px 20px;
+    margin-top: 30px;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .business-title-o { font-size: 46px; }
+  .business-title-text { font-size: 26px; }
+  .supply-title-graphic-f { font-size: 40px; }
+  .supply-title-text { font-size: 24px; }
 }
