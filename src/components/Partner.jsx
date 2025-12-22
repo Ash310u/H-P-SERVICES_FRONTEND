@@ -20,27 +20,22 @@ export default function Partner() {
 
   return (
     <section className="partner-section">
-      {/* Decorative Circles */}
       <div className="partner-decorative-circles">
         <div className="partner-circle-left"></div>
         <div className="partner-circle-right"></div>
       </div>
 
-      {/* Title */}
       <h2 className="partner-title" data-aos="fade-up">
         <span className="partner-title-big-p">P</span>
         <span className="partner-title-rest">ARTNERS PROFILE</span>
       </h2>
 
-      {/* Decorative Lines */}
       <div className="partner-decorative-lines">
         <div className="partner-line-left"></div>
         <div className="partner-line-right"></div>
       </div>
 
-      {/* Card Container */}
       <div className="partner-card-container">
-        {/* CARD 1 */}
         <div
           className={`partner-card ${activeIndex === 0 ? "active" : ""}`}
           data-aos="fade-up"
@@ -64,7 +59,6 @@ export default function Partner() {
           </div>
         </div>
 
-        {/* CARD 2 */}
         <div
           className={`partner-card ${activeIndex === 1 ? "active" : ""}`}
           data-aos="fade-up"
