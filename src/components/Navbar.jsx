@@ -170,6 +170,17 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="my-[18px]">
+            <a
+              href="https://forms.gle/uCcqNftGXYULELzY6"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="text-white text-lg no-underline cursor-pointer transition-opacity duration-200 block hover:opacity-80 max-sm:text-[17px] max-[360px]:text-base"
+            >
+              CAREERS
+            </a>
+          </li>
+          <li className="my-[18px]">
             <Link to="/contact" onClick={() => setOpen(false)} className="text-white text-lg no-underline cursor-pointer transition-opacity duration-200 block hover:opacity-80 max-sm:text-[17px] max-[360px]:text-base">
               CONTACT US
             </Link>
