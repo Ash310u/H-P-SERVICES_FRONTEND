@@ -53,10 +53,11 @@ export default function LandingPage() {
         </div>
 
         <div className="flex justify-center items-end mt-[70px] gap-2.5 max-md:mt-[30px] max-md:items-baseline max-sm:mt-5">
-          <span className="text-[96px] font-black text-[#075056] leading-none max-md:text-[52px] max-md:relative max-md:-top-1 max-sm:text-[46px] max-sm:-top-0.5">O</span>
-          <h2 className="text-[52px] font-black leading-[1.1] max-md:text-[28px] max-sm:text-[26px]">UR BUSINESSES</h2>
+        <h2 className="text-5xl font-black leading-[1.1] relative max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
+            <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">O</span>
+            UR BUSINESSES <br className="max-sm:hidden" />
+          </h2>
         </div>
-
         <div className="w-40 h-1 bg-[#075056] my-5 mx-auto mb-[30px] max-md:w-32 max-sm:w-24 max-sm:mb-5" />
 
         <p className="max-w-[900px] mx-auto mb-[60px] text-[17px] leading-[1.8] text-center px-5 max-md:text-base max-md:mb-10 max-sm:text-sm max-sm:mb-8">
