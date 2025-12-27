@@ -23,10 +23,9 @@ export default function Partner() {
         <div className="absolute w-20 h-20 bg-[#075056] rounded-full -top-10 left-[5%]"></div>
         <div className="absolute w-20 h-20 bg-[#075056] rounded-full -top-10 right-[5%]"></div>
       </div>
-
-      <h2 className="flex justify-center items-start gap-2 mb-[70px] max-md:mb-10 max-sm:mb-8 max-sm:gap-1" data-aos="fade-up">
-        <span className="text-[110px] font-extrabold text-[#075056] -mt-8 max-lg:text-[90px] max-md:text-[70px] max-sm:text-[50px] max-sm:-mt-6">P</span>
-        <span className="text-[50px] font-extrabold mt-[15px] max-lg:text-[42px] max-md:text-[32px] max-sm:text-[22px] max-sm:mt-3">ARTNERS PROFILE</span>
+      <h2 className="text-5xl font-black leading-[1.1] relative max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
+        <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">P</span>
+        ARTNERS PROFILE <br className="max-sm:hidden" />
       </h2>
 
       <div className="relative w-full max-w-[1400px] mx-auto my-5 mb-[70px] h-0 max-md:hidden">
