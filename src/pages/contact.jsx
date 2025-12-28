@@ -29,8 +29,8 @@ export default function Contact() {
 
         <p className="text-sm text-[#333] leading-[1.6] mb-3 max-md:text-xs max-md:mb-2 max-sm:text-[11px] max-sm:leading-[1.5] max-sm:mb-1.5">
           Email: <br />
-          kp4283462009@gmail.com <br />
-          abhradeephazra99@gmail.com
+          koushikpaul@hnpprojects.com <br />
+          abhradeephazra@hnpprojects.com
         </p>
 
         <p className="text-sm text-[#333] leading-[1.6] mb-3 max-md:text-xs max-md:mb-2 max-sm:text-[11px] max-sm:leading-[1.5] max-sm:mb-1.5">
