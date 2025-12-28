@@ -136,10 +136,13 @@ export default function AwardsPage() {
         <div className="bg-[#e4eef0] w-full relative font-['Montserrat',sans-serif] pt-[100px] max-md:pt-[80px] max-sm:pt-[70px]">
           <Header />
           <section className="w-[1280px] h-[330px] mx-auto relative max-w-full px-5 max-lg:h-[280px] max-md:h-[240px] max-sm:h-auto max-sm:flex max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <div className="absolute -top-[60px] left-0 max-lg:-top-[50px] max-md:-top-[40px] max-sm:static max-sm:mb-2">
-              <h1 className="absolute top-0 left-[60px] text-[140px] font-bold text-[#075056] leading-[0.8] max-lg:text-[100px] max-lg:left-8 max-md:text-[80px] max-md:left-5 max-sm:static max-sm:text-[60px]">A</h1>
-              <h1 className="absolute top-[82px] left-[165px] text-[60px] font-bold text-black max-lg:text-[50px] max-lg:top-[60px] max-lg:left-[135px] max-md:text-[40px] max-md:top-[50px] max-md:left-[105px] max-sm:static max-sm:text-[32px] max-sm:ml-2">WARDS</h1>
+            <div className="flex items-end gap-2.5 max-md:items-baseline max-sm:gap-1">
+              <h1 className="text-7xl font-black leading-[1.1] relative max-lg:text-6xl max-md:text-5xl max-sm:text-4xl">
+                <span className="text-[100px] text-[#075056] max-lg:text-[80px] max-md:text-7xl max-sm:text-6xl">A</span>
+                WARDS <br className="max-sm:hidden" />
+              </h1>
             </div>
+            {/* </div> */}
             {/* Right-side big + small Figma bubbles */}
             <div className="absolute w-[136px] h-[136px] top-[109px] left-[1111px] bg-[#075056] rounded-full max-lg:w-[100px] max-lg:h-[100px] max-lg:left-auto max-lg:right-8 max-md:hidden"></div>
             <div className="absolute w-[54.4px] h-[54.4px] top-[194px] left-[1042px] bg-[#075056] rounded-full max-lg:w-[40px] max-lg:h-[40px] max-lg:left-auto max-lg:right-[130px] max-md:hidden"></div>
@@ -176,8 +179,10 @@ export default function AwardsPage() {
             </div>
             {/* Title */}
             <div className="absolute top-5 left-[390px] flex items-end gap-3 max-lg:left-[280px] max-lg:gap-2 max-md:static max-md:mb-4 max-md:justify-center max-sm:gap-1">
-              <h1 className="text-[125px] font-bold text-[#075056] leading-[0.85] max-lg:text-[90px] max-md:text-[70px] max-sm:text-[50px]">C</h1>
-              <h1 className="text-[56px] font-bold text-black pb-[55px] max-lg:text-[42px] max-lg:pb-10 max-md:text-[34px] max-md:pb-8 max-sm:text-[24px] max-sm:pb-6">ERTIFICATES</h1>
+            <h2 className="mt-16 text-5xl font-black leading-[1.1] relative max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-sm:mt-8">
+                <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">C</span>
+                ERTIFICATES <br className="max-sm:hidden" />
+              </h2>
             </div>
             {/* Paragraph */}
             <p className="absolute top-[200px] left-[67px] w-[1144px] text-base font-normal leading-[150%] text-black text-center max-lg:w-[90%] max-lg:left-[5%] max-lg:top-[180px] max-md:static max-md:w-full max-md:text-sm max-sm:text-xs">
